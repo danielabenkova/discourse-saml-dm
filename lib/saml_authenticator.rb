@@ -352,7 +352,7 @@ class SamlAuthenticator < ::Auth::ManagedAuthenticator
   end
 
   def self.saml_base_url
-    DiscourseSaml.setting(:base_url).presence || Discourse.base_url
+    DiscourseSaml.setting(:base_url).presence || "https://czbrn-discourse.emea.thermo.com"
   end
 
   private
