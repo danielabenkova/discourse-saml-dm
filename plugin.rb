@@ -19,7 +19,7 @@ end
 
 on(:before_session_destroy) do |data|
   next if !DiscourseSaml.setting(:slo_target_url).present?
-  data[:redirect_url] = Discourse.base_path + "/auth/saml/spslo"
+  data[:redirect_url] = "https://czbrn-discourse.emea.thermo.com" + "/auth/saml/spslo"
 end
 
 module ::DiscourseSaml
